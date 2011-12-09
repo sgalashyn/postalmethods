@@ -1,0 +1,107 @@
+-900;Received;Letter was received and queued for processing
+-910;In Process;Letter is being processed. Processing may take a few hours.
+-990;Not enough funds available;Attention Needed. The account does not have enough funds to process the letter. If additional funds are added in the Account section of the Control Panel within 72 hours, the letter will continue being processed immediately thereafter.
+-995;Waiting For Delivery;Letter was processed and is waiting to be dispatched to the postal agency. This may take up to one business day.
+-1002;Completed: successfully completed in "Development" work mode;Letter handling is complete, but the letter will not be physically processed or delivered to the postal agency.
+-1010;Failed: no funds available to process the letter;Account does not have sufficient funds to process the letter.
+-1018;Failed: Provided US address cannot be verified;US addresses must be verified by CASS and DPV. Make sure the address provided contains all address details.
+-1021;Failed: Invalid page size;One of the document's page size is set to an unsupported size. See supported page sizes.
+-1025;Failed: A document could not be processed;Make sure your documents contain no macros. Verify that you can view your document locally. If the document appears OK, contact technical support.
+-1045;Failed: Recipient postal address could not be extracted from the document;Verify that the address is correctly positioned.
+-1065;Failed: Too many sheets of paper;The letter contains more sheets of paper than may be inserted into the selected envelope. For example, a No. 10 envelope may hold up to 7 sheets of paper.
+-1099;Failed: Internal Error;Processing failed due to an internal error. Contact technical support.
+-3000;OK;Successfully received the Web Service request.
+-3001;This user is not authorized to access the specified item
+-3002;User was actively blocked;This user was actively blocked by PostalMethods. Please contact support@postalmethods.com for more details.
+-3003;Not Authenticated;API key does not exist or Username does not exist or username and password do not match.
+-3004;The specified file extension is not supported;The extension specified in FileExtension is not a Supported file type.
+-3010;Rejected: no funds available to the account;Your account does not have the necessary balance to process your letter. Check your balance and purchase a new prepaid card.
+-3020;Rejected: file specified is currently unavailable;The requested PDF is currently unavailable. Possible causes: (1) file is still being processed, (2) file was deleted due to enhanced privacy settings, (3) file was deleted due to age limitations.
+-3022;Cancellation Denied: The letter was physically processed and cannot be cancelled or is already cancelled;It is not possible to cancel the letter delivery because the letter was already processed and queued for delivery to the postal agency or it may have been cancelled already.
+-3113;Rejected: city field contains more than 30 characters;The city property is limited to 30 characters.
+-3114;Rejected: state field contains more than 30 characters;The state property is limited to 30 characters.
+-3115;Warning: no data was returned for you query;Your query did not return any results.
+-3116;Warning: the specified letter is unavailable;The specified item ID does not exist in the system.
+-3117;Rejected: Company field contains more than 45 characters;The company property is limited to 45 characters.
+-3118;Rejected: Address1 field contains more than 45 characters;Field Address1 is limited to 45 characters.
+-3119;Rejected: Address2 field contains more than 45 characters;Field Address2 is limited to 45 characters.
+-3120;Rejected: AttentionLine1 field contains more than 45 characters;Field AttentionLine1 is limited to 45 characters.
+-3121;Rejected: AttentionLine2 field contains more than 45 characters;Field AttentionLine2 is limited to 45 characters.
+-3122;Rejected: AttentionLine3 field contains more than 45 characters;Field AttentionLine3 is limited to 45 characters.
+-3123;Rejected: PostalCode/ZIP field contains more than 15 characters;Postal Code / ZIP field is limited to 15 characters.
+-3124;Rejected: Country field contains more than 30 characters;Country field is limited to 30 characters.
+-3125;Only account administrators are allowed access to this information;This information may be accessed by users with Administrator permissions only.
+-3126;Invalid file name;File name should be in the format: FileName.Ext
+-3127;File name already exists;Used file name already exists for this user. File names cannot be duplicated.
+-3128;The ImageSideFileType field is empty or missing;ImageSideFileType is a required field. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Please post your code on our forum for further assistance.
+-3129;The AddressSideFileType field is empty or missing;AddressSideFileType is a required field. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Please post your code on our forum for further assistance.
+-3130;Unsupported file extension in ImageSideFileType;File extension provided for ImageSideFileType is unsupported.
+-3131;Unsupported file extension in AddressSideFileType;File extension provided for AddressSideFileType is unsupported.
+-3132;The ImageSideBinaryData field is empty or missing;ImageSideBinaryData must contain your document or image as BASE64 binary data. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Please post your code on our forum for further assistance.
+-3133;The AddressSideBinaryData field is empty or missing;AddressSideBinaryData must contain your document or image as BASE64 binary data. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Please post your code on our forum for further assistance.
+-3134;File name provided in ImageSideFileType does not exist for this user;The provided file name does not exist for this user. The file name may be inaccurate or it may have been deleted.
+-3135;File name provided in AddressSideFileType does not exist for this user;The provided file name does not exist for this user. The file name may be inaccurate or it may have been deleted.
+-3136;Image side: One or more of the fields is missing from the template;One or more of the merge fields provided for the image side does not correspond to a place holder in the template specified.
+-3137;Address side: One or more of the fields is missing from the template;One or more of the merge fields provided for the address side does not correspond to a place holder in the template specified.
+-3138;Image side: The XML merge data is invalid;The XML provided as the merge data source for the image side is invalid.
+-3139;Address side: The XML merge data is invalid;The XML provided as the merge data source for the address side is invalid.
+-3142;Image side: This file cannot be used as a template;The file specified for the image side cannot be used as a template.
+-3143;Address side: This file cannot be used as a template;The file specified for the address side cannot be used as a template.
+-3144;The XML merge data is invalid;The XML data provided as merge data is invalid.
+-3145;One or more of the fields in the XML merge data is missing from the selected template;The XML must not contain a field that does not appear in the template. Read more.
+-3146;Specified pre-uploaded document does not exist;The specified template does not exist or the user does not have permissions to use it.
+-3147;Uploading a file and a template in the same request is not allowed;It is not possible to upload a file and refer to a template in the same request. Please check the syntax of FileExtension in your code.
+-3209;No more users allowed;This account has reached the limit for the number of users allowed. To increase this limit, please Contact Us.
+-3210;Last administrator for account;This user is the last administrator for this account. At least one user with Administrator permissions must exist in an account.
+-3211;User does not exist for this account;This user does not exist for this account.
+-3212;One or more of the parameters are invalid;Please verify that your parameter names appear in this list.
+-3213;Invalid value: General_Username;An allowed value must be used
+-3214;Invalid value: General_Description;An allowed value must be used
+-3215;Invalid value: General_Timezone;An allowed value must be used
+-3216;Invalid value: General_WordMode;An allowed value must be used
+-3217;Invalid value: Security_Password;An allowed value must be used
+-3218;Invalid value: Security_AdministrativeEmail;An allowed value must be used
+-3219;Invalid value: Security_KeepContentOnServer;An allowed value must be used
+-3220;Invalid value: Letters_PrintColor;An allowed value must be used
+-3221;Invalid value: Letters_PrintSides;An allowed value must be used
+-3222;Invalid value: Postcards_DefaultScaling;An allowed value must be used
+-3223;Invalid value: Feedback_FeedbackType;An allowed value must be used
+-3224;Invalid value: Feedback_Email_WhenToSend_EmailReceived;An allowed value must be used
+-3225;Invalid value: Feedback_Email_WhenToSend_Completed;An allowed value must be used
+-3226;Invalid value: Feedback_Email_WhenToSend_Error;An allowed value must be used
+-3227;Invalid value: Feedback_Email_WhenToSend_BatchErrors;An allowed value must be used
+-3228;Invalid value: Feedback_Email_DefaultFeedbackEmail;An allowed value must be used
+-3229;Invalid value: Feedback_Email_Authentication;An allowed value must be used
+-3230;Invalid value: Feedback_Post_WhenToSend_Completed;An allowed value must be used
+-3231;Invalid value: Feedback_Post_WhenToSend_Error;An allowed value must be used
+-3232;Invalid value: Feedback_Post_WhenToSend_BatchErrors;An allowed value must be used
+-3233;Invalid value: Feedback_Post_FeedbackURL;An allowed value must be used
+-3234;Invalid value: Feedback_Post_Authentication;An allowed value must be used
+-3235;Invalid value: Feedback_Soap_WhenToSend_Completed;An allowed value must be used
+-3236;Invalid value: Feedback_Soap_WhenToSend_Error;An allowed value must be used
+-3237;Invalid value: Feedback_Soap_WhenToSend_BatchErrors;An allowed value must be used
+-3238;Invalid value: Feedback_Soap_FeedbackURL;An allowed value must be used
+-3239;Invalid value: Feedback_Soap_Authentication;An allowed value must be used
+-3240;Invalid parameters array;Use a (x,1) array (zero based)
+-3150;General System Error;Contact technical support
+-3160;File does not exist;The file name specified does not exist. Make sure you are using the <file name>.<file extension> format.
+-3161;Insufficient Permissions;This user does not have permissions to access this file. See File Permissions.
+-3162;Too many uploaded files;This account has reached its file quota. Check the System Limitations page.
+-3163;No files for the account;No files were uploaded for this account.
+-3164;Only Administrator can upload file as account;Only users with Administrator permissions are allowed to upload a file with Account permissions. See File Permissions.
+-3165;User does not have an API key assigned;There is no API Key for this user. Please generate one first.
+-3500;Warning: too many attempts were made for this method;Check the System Limitations page.
+-4001;The Username field is empty or missing;Username is a required field. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you're using. Contact technical support for further assistance.
+-4002;The Password field is empty or missing;Password is a required field. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Contact technical support for further assistance.
+-4003;The MyDescription field is empty or missing;Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Please post your code on our forum for further assistance.
+-4004;The FileExtension field is empty or missing;FileExtension is a required field. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Contact technical support for further assistance.
+-4005;The FileBinaryData field is empty or missing;FileBinaryData is a required field. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Please post your code on our forum for further assistance.
+-4006;The Address1 field is empty or missing;Address1 is a required field. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Please post your code on our forum for further assistance.
+-4007;The City field is empty or missing;City is a required field. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Contact technical support for further assistance.
+-4008;The Attention1 or Company fields are empty or missing;At least one of either Attention1 or Company fields must contain a value. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Contact technical support for further assistance.
+-4009;The ID field is empty or missing;ID is a required field. ID should contain the ID of the letter you querying about. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Contact technical support for further assistance.
+-4010;The MinID field is empty or missing;MinID is a required field. MinID should contain the ID of the first letter in the range you querying about. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Contact technical support for further assistance.
+-4011;The MaxID field is empty or missing;MaxID is a required field. MaxID should contain the ID of the last letter in the range you are querying about. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Contact technical support for further assistance.
+-4013;Invalid ID or IDs;ID field should be either an integer, a range of integers (e.g., 1021984-1021994) or a list of comma separated integers (e.g., 1021984,1021985,1021986).
+-4014;The MergeData field is empty or missing;MergeData is a required field. MergeData should contain the XML or binary representation of the XML to be used as the merge data source. Please make sure that you did not send a null string. If it is missing, the problem might be caused by the SOAP package you use. Contact technical support for further assistance.
+-4015;Missing field: APIKey;The APIKey field is required.
