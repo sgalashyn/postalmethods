@@ -2,7 +2,7 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
 
 
     /*
-     * Version 0.4 — Dec 9, 2011
+     * Version 0.5 — Dec 9, 2011
      * Home page: https://github.com/sgalashyn/postalmethods
      * API docs: http://www.postalmethods.com/postal-api
      */
@@ -10,7 +10,6 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
 
     /*
      * TODO:
-     * - Check compatibility with CF9 => this wont work: local.service[arguments.method]
      * - Prepare usage examples and README.
      * - Include webhook parsing methods (?)
      */
@@ -110,10 +109,12 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
 
                 variables.service = CreateObject("webservice", variables.apiurl.soap);
 
+                // evaluate has acceptable performance for web-service invokation which is pretty slow
+                // possible hacking with cfinvoke wrapping would affect the library code badly
+                // hopefully ACF 10 will support following syntax, Railo does this already:
+                // local.result = variables.service[arguments.method](argumentCollection = local.args);
 
-                // invoke the method
-
-                local.result = variables.service[arguments.method](argumentCollection = local.args);
+                local.result = Evaluate("variables.service.#arguments.method#(argumentCollection = local.args)");
 
                 if (isNumeric(local.result)) {
 
@@ -252,13 +253,13 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
 
 
         }
-        catch (any local.exception) {
+        catch (any exception) {
 
             local.output.fault = true;
-            local.output.data = local.exception.Message;
+            local.output.data = exception.Message;
 
             if (getVerbose()) {
-                local.output.exception = local.exception;
+                local.output.exception = exception;
             }
 
         }

@@ -1,6 +1,6 @@
 ## Description
 
-CFML wrapper library for [PostalMethods Web-to-Postal Web Service v2009-02-26](http://www.postalmethods.com/postal-api).
+CFML wrapper library for [PostalMethods Web-to-Postal Web Service](http://www.postalmethods.com/).
 
 First version of this library was initially created for [ContactChimp](http://contactchimp.com/) application.
 
@@ -8,7 +8,7 @@ First version of this library was initially created for [ContactChimp](http://co
 
 Library uses modern CFScript syntax, so it requires at least Adobe ColdFusion 9 or Railo 3.2 engine to work.
 
-Library uses both types of access point (SOAP/POST) for different methods. POST API used for Get* methods 
+Library uses both types of access point (SOAP/POST) for different methods. POST API used for *Get* methods 
 to avoid incompatibility with SOAP web-service, discovered in Apache Axis version used by Railo 3.x.
 Additionally, XML response is easier to handle for these.
 
@@ -16,9 +16,11 @@ Please note that there are some [important limits](http://www.postalmethods.com/
 
 ## Using Component
 
-First you need to register an account and [](https://www.smartystreets.com/Account/Api/Install/rest/).
+You need to have a PostalMethods account to use the API. No special API keys needed, just your username and password.
+Make sure your account is in development Work Mode, though this is default state for new accounts.
+You may be interested in creating multiple users, reasons of this are explained in Tips & Tricks section.
 
-Please note the assets directory shipped with this library before. There's a JSON file status-codes.json, 
+Please note the *assets* directory shipped with this library before. There's a JSON file status-codes.json, 
 it is required for proper translating API response codes to meaningful text (yes, API developers did not bother 
 to return both code and text). Path to this file is passed as init argument, as will be described below.  
 
