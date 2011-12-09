@@ -148,7 +148,7 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
             else {
 
 
-                // use HTTP POST API for 'reading' methods
+                // use HTTP POST API for GetXXX methods
 
                 // Note: Railo (specifically, its Apache Axis) does not process
                 // some requests properly, plus XML response is easier to handle
@@ -185,7 +185,7 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
 
                             local.nodes = XMLSearch(local.parsedXml, arguments.xpath);
 
-                            if (ListFind("GetUploadedFileDetails", arguments.method)) {
+                            if (ListFind("GetUploadedFileDetails,GetStatus,GetDetails,GetDetailsExtended", arguments.method)) {
 
                                 // XML to array of structures
 
@@ -396,7 +396,7 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
             ID = arguments.ID
         };
 
-        return invokeMethod("GetStatus", defaults, arguments, "post", "//:LetterStatusAndDesc/*");
+        return invokeMethod("GetStatus", defaults, arguments, "post", "//:LetterStatusAndDesc");
 
     }
 
@@ -411,7 +411,7 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
             ID = arguments.ID
         };
 
-        return invokeMethod("GetDetails", defaults, arguments, "post", "//:Details/:Details/*");
+        return invokeMethod("GetDetails", defaults, arguments, "post", "//:Details/:Details");
 
     }
 
@@ -426,7 +426,7 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
             ID = arguments.ID
         };
 
-        return invokeMethod("GetDetailsExtended", defaults, arguments, "post", "//:ExtendedDetails/*");
+        return invokeMethod("GetDetailsExtended", defaults, arguments, "post", "//:ExtendedDetails");
 
     }
 
