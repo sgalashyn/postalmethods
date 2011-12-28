@@ -2,16 +2,9 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
 
 
     /*
-     * Version 0.5 — Dec 9, 2011
+     * Version 1.0 — Dec 28, 2011
      * Home page: https://github.com/sgalashyn/postalmethods
      * API docs: http://www.postalmethods.com/postal-api
-     */
-
-
-    /*
-     * TODO:
-     * - Prepare usage examples and README.
-     * - Include webhook parsing methods (?)
      */
 
 
@@ -27,11 +20,11 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
 
 
     /*
-     * @username Docmail user name
+     * @username PostalMethods user name
      * @password Password for the user
+     * @statuscodes Full path to status codes JSON file
      * @useragent Custom useragent for HTTP requests
      * @verbose Append extended info to the output
-     * @statuscodes Full path to status codes JSON file
      */
     public any function init(
         required string username,
@@ -116,6 +109,10 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
 
                 local.result = Evaluate("variables.service.#arguments.method#(argumentCollection = local.args)");
 
+                if (getVerbose()) {
+                    local.output.result = local.result;
+                }
+
                 if (isNumeric(local.result)) {
 
                     if (local.result GT 0 OR local.result EQ variables.successCode) {
@@ -164,6 +161,10 @@ component displayname="PostalMethods" hint="PostalMethods Web-to-Postal Web Serv
                 }
 
                 local.result = local.service.send().getPrefix();
+
+                if (getVerbose()) {
+                    local.output.result = local.result;
+                }
 
 
                 if (local.result.responseheader.status_code EQ 200) {
